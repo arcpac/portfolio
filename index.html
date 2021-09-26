@@ -385,6 +385,10 @@
   <script src="assets/js/lightbox.js"></script>
   <script src="assets/js/custom.js"></script>
   <script>
+    $(document).ready(function () {
+      location.reload(true);
+    });
+
     $(".main-menu li:first").addClass("active");
 
     var showSection = function showSection(section, isAnimate) {
