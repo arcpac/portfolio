@@ -385,9 +385,12 @@
   <script src="assets/js/lightbox.js"></script>
   <script src="assets/js/custom.js"></script>
   <script>
-    $(document).ready(function () {
-      location.reload(true);
-    });
+    window.onload = function () {
+      if (!window.location.hash) {
+        window.location = window.location + '#';
+        window.location.reload();
+      }
+    }
 
     $(".main-menu li:first").addClass("active");
 
